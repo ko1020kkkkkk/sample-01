@@ -1,0 +1,49 @@
+<！DOCTYPE html >
+< html >
+<頭>
+	< meta  charset = " UTF-8 " >
+	<タイトル>三目スライス</タイトル>
+</ヘッド>
+<本体>
+< h1 >三目裂</ h1 >
+< canvas  id =" canvas " > </キャンバス>
+
+<スクリプト>
+
+ キャンバス = ドキュメントとします。getElementById （'canvas' ）;
+ ctx  =  canvasとします。getContext （'2d' ）;
+キャンバス。幅 =  400 ;
+キャンバス。高さ =  400 ;
+
+ w  =  300 、 h  =  300とします。
+ x0  =  50 、 y0  =  50とします。
+
+ctx 。strokeRect （x0 、 y0 、 w 、 h ）;
+
+ctx 。beginPath （）;
+ctx 。moveTo （150、50 ）; _  _
+ctx 。lineTo （150、350 ）; _ _
+ctx 。moveTo （250、50 ）; _  _
+ctx 。lineTo （250、350 ）; _ _
+ctx 。moveTo （50、150 ）; _  _
+ctx 。lineTo （350、150 ）; _ _
+ctx 。moveTo （50、250 ）; _  _
+ctx 。lineTo （350、250 ）; _ _
+ctx 。ストローク（）;
+
+function  onClick （e ） {
+     rect  =  eとします。ターゲット。getBoundingClientRect （）;
+    x  =  e 。clientX  -  rect 。左;
+    y  =  e 。clientY  -  rect 。トップ;
+
+	ctx 。beginPath （）;
+	ctx 。arc （x 、 y 、 40、0、2 * Math .PI 、false ）; _  _ _  _  _  
+	ctx 。ストローク（）;
+}
+
+キャンバス。addEventListener （'クリック' 、 onClick 、 false ）;
+
+</スクリプト>
+
+</本文>
+</ html >
